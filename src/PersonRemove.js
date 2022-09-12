@@ -10,13 +10,13 @@ export default class PersonRemove extends React.Component {
 		this.setState({ id: event.target.value });
 	};
 
-	 handleSubmit = (async event) => {
+	handleSubmit = async (event) => {
 		event.preventDefault();
 
-		 const response = await API.delete(`users/${this.state.id}`).then((res) => {
-				console.log(response);
-				console.log(response.data);
-			});
+		const response = await API.delete(`users/${this.state.id}`).then((res) => {
+			console.log(response);
+			console.log(response.data);
+		});
 	};
 
 	render() {
